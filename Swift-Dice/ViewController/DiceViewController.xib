@@ -9,7 +9,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DiceViewController" customModule="Swift_Dice" customModuleProvider="target">
             <connections>
-                <outlet property="blueView" destination="O3m-jP-0nK" id="D3p-2s-W53"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,25 +16,9 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <subviews>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O3m-jP-0nK">
-                    <rect key="frame" x="107" y="348" width="200" height="200"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <gestureRecognizers/>
-                    <connections>
-                        <outletCollection property="gestureRecognizers" destination="D0A-LG-xUJ" appends="YES" id="sKf-kb-rtA"/>
-                    </connections>
-                </view>
-            </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="26" y="14"/>
         </view>
-        <panGestureRecognizer minimumNumberOfTouches="1" id="D0A-LG-xUJ">
-            <connections>
-                <action selector="padOnBlueView:" destination="-1" id="Zxg-GU-W8f"/>
-            </connections>
-        </panGestureRecognizer>
     </objects>
 </document>
