@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		5E97C31A244587CC0083CA2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E97C319244587CC0083CA2E /* AppDelegate.swift */; };
 		5E97C31C244587CC0083CA2E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E97C31B244587CC0083CA2E /* SceneDelegate.swift */; };
-		5E97C31E244587CC0083CA2E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E97C31D244587CC0083CA2E /* ViewController.swift */; };
-		5E97C321244587CC0083CA2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E97C31F244587CC0083CA2E /* Main.storyboard */; };
 		5E97C323244587CD0083CA2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E97C322244587CD0083CA2E /* Assets.xcassets */; };
 		5E97C326244587CD0083CA2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E97C324244587CD0083CA2E /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -19,8 +17,6 @@
 		5E97C316244587CC0083CA2E /* Swift-Dice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift-Dice.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E97C319244587CC0083CA2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5E97C31B244587CC0083CA2E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5E97C31D244587CC0083CA2E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5E97C320244587CC0083CA2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5E97C322244587CD0083CA2E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5E97C325244587CD0083CA2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5E97C327244587CD0083CA2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,15 +52,29 @@
 		5E97C318244587CC0083CA2E /* Swift-Dice */ = {
 			isa = PBXGroup;
 			children = (
+				5E97C32D244588750083CA2E /* Application */,
+				5E97C32E244588810083CA2E /* SupportingFile */,
+			);
+			path = "Swift-Dice";
+			sourceTree = "<group>";
+		};
+		5E97C32D244588750083CA2E /* Application */ = {
+			isa = PBXGroup;
+			children = (
 				5E97C319244587CC0083CA2E /* AppDelegate.swift */,
 				5E97C31B244587CC0083CA2E /* SceneDelegate.swift */,
-				5E97C31D244587CC0083CA2E /* ViewController.swift */,
-				5E97C31F244587CC0083CA2E /* Main.storyboard */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		5E97C32E244588810083CA2E /* SupportingFile */ = {
+			isa = PBXGroup;
+			children = (
 				5E97C322244587CD0083CA2E /* Assets.xcassets */,
 				5E97C324244587CD0083CA2E /* LaunchScreen.storyboard */,
 				5E97C327244587CD0083CA2E /* Info.plist */,
 			);
-			path = "Swift-Dice";
+			path = SupportingFile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +137,6 @@
 			files = (
 				5E97C326244587CD0083CA2E /* LaunchScreen.storyboard in Resources */,
 				5E97C323244587CD0083CA2E /* Assets.xcassets in Resources */,
-				5E97C321244587CC0083CA2E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,7 +147,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E97C31E244587CC0083CA2E /* ViewController.swift in Sources */,
 				5E97C31A244587CC0083CA2E /* AppDelegate.swift in Sources */,
 				5E97C31C244587CC0083CA2E /* SceneDelegate.swift in Sources */,
 			);
@@ -147,14 +155,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		5E97C31F244587CC0083CA2E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5E97C320244587CC0083CA2E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5E97C324244587CD0083CA2E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -286,7 +286,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4PAC9XA99N;
-				INFOPLIST_FILE = "Swift-Dice/Info.plist";
+				INFOPLIST_FILE = "Swift-Dice/SupportingFile/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,7 +304,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4PAC9XA99N;
-				INFOPLIST_FILE = "Swift-Dice/Info.plist";
+				INFOPLIST_FILE = "Swift-Dice/SupportingFile/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
