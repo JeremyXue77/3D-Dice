@@ -18,19 +18,47 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YxB-hg-upT" customClass="DiceView" customModule="Swift_Dice" customModuleProvider="target">
-                    <rect key="frame" x="157" y="398" width="100" height="100"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="100" id="SPA-wW-7m5"/>
-                        <constraint firstAttribute="width" constant="100" id="neb-5X-79D"/>
-                    </constraints>
-                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="uqC-Pp-pY7">
+                    <rect key="frame" x="99" y="360" width="216" height="176"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YxB-hg-upT" customClass="DiceView" customModule="Swift_Dice" customModuleProvider="target">
+                            <rect key="frame" x="58" y="0.0" width="100" height="100"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="100" id="SPA-wW-7m5"/>
+                                <constraint firstAttribute="width" constant="100" id="neb-5X-79D"/>
+                            </constraints>
+                        </view>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="fne-Il-gE3">
+                            <rect key="frame" x="0.0" y="132" width="216" height="44"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qkQ-lD-4Iy">
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="44"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="100" id="dak-ss-nS0"/>
+                                        <constraint firstAttribute="height" constant="44" id="lVh-87-z4j"/>
+                                    </constraints>
+                                    <state key="normal" title="start"/>
+                                    <connections>
+                                        <action selector="start:" destination="-1" eventType="touchUpInside" id="rF7-Fu-QiT"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Epa-rv-e6Z">
+                                    <rect key="frame" x="116" y="0.0" width="100" height="44"/>
+                                    <state key="normal" title="stop"/>
+                                    <connections>
+                                        <action selector="stop:" destination="-1" eventType="touchUpInside" id="kHK-A4-2Gk"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                </stackView>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
-                <constraint firstItem="YxB-hg-upT" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="E1o-3w-GAP"/>
-                <constraint firstItem="YxB-hg-upT" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="r9i-1C-wKO"/>
+                <constraint firstItem="uqC-Pp-pY7" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="8GC-zk-2fy"/>
+                <constraint firstItem="uqC-Pp-pY7" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="bga-sj-epZ"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="26" y="14"/>

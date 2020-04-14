@@ -13,6 +13,7 @@ class DiceView: UIView {
     // MARK: Property
     private var angle = CGPoint(x: 0, y: 0)
 
+    // MARK: Initializer
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupDiceViewPanGesture()
@@ -81,8 +82,16 @@ class DiceView: UIView {
     
     // MARK: Action
     @objc func viewTransform(sender: UIPanGestureRecognizer) {
-        
         let point = sender.translation(in: self)
+        let isEnded = (sender.state == .ended)
+        transform(point: point, isEnded: isEnded)
+    }
+}
+
+// MARK: - DiceView Methods
+extension DiceView {
+    
+    func transform(point: CGPoint, isEnded: Bool) {
         let angleX = angle.x + (point.x/30)
         let angleY = angle.y - (point.y/30)
         
@@ -92,10 +101,9 @@ class DiceView: UIView {
         transform = CATransform3DRotate(transform, angleY, 1, 0, 0)
         self.layer.sublayerTransform = transform
         
-        if sender.state == .ended {
+        if isEnded {
             angle.x = angleX
             angle.y = angleY
         }
     }
-
 }

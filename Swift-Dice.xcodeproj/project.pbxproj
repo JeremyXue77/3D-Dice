@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5E01FD61244590B200936A50 /* DiceImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E01FD60244590B200936A50 /* DiceImageView.swift */; };
 		5E01FD6324459CD300936A50 /* DiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E01FD6224459CD300936A50 /* DiceView.swift */; };
+		5E01FD682445A67A00936A50 /* DiceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E01FD672445A67A00936A50 /* DiceService.swift */; };
 		5E97C31A244587CC0083CA2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E97C319244587CC0083CA2E /* AppDelegate.swift */; };
 		5E97C31C244587CC0083CA2E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E97C31B244587CC0083CA2E /* SceneDelegate.swift */; };
 		5E97C323244587CD0083CA2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E97C322244587CD0083CA2E /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		5E01FD60244590B200936A50 /* DiceImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceImageView.swift; sourceTree = "<group>"; };
 		5E01FD6224459CD300936A50 /* DiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceView.swift; sourceTree = "<group>"; };
+		5E01FD672445A67A00936A50 /* DiceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceService.swift; sourceTree = "<group>"; };
 		5E97C316244587CC0083CA2E /* Swift-Dice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift-Dice.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E97C319244587CC0083CA2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5E97C31B244587CC0083CA2E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,6 +52,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		5E01FD642445A5E500936A50 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				5E01FD672445A67A00936A50 /* DiceService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		5E97C30D244587CC0083CA2E = {
 			isa = PBXGroup;
 			children = (
@@ -69,6 +79,7 @@
 		5E97C318244587CC0083CA2E /* Swift-Dice */ = {
 			isa = PBXGroup;
 			children = (
+				5E01FD642445A5E500936A50 /* Service */,
 				5E01FD5F2445908D00936A50 /* View */,
 				5E97C32F244589170083CA2E /* ViewController */,
 				5E97C32D244588750083CA2E /* Application */,
@@ -180,6 +191,7 @@
 				5E01FD6324459CD300936A50 /* DiceView.swift in Sources */,
 				5E01FD61244590B200936A50 /* DiceImageView.swift in Sources */,
 				5E97C3322445892C0083CA2E /* DiceViewController.swift in Sources */,
+				5E01FD682445A67A00936A50 /* DiceService.swift in Sources */,
 				5E97C31C244587CC0083CA2E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
