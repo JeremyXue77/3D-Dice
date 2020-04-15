@@ -43,5 +43,7 @@ extension DiceService {
     func stopRolling() {
         timer?.invalidate()
         timer = nil
+        let point = Int.random(in: 1...6)
+        diceView.transform(to: point)
     }
 }

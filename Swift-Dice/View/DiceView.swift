@@ -12,6 +12,9 @@ class DiceView: UIView {
     
     // MARK: Property
     private var angle = CGPoint(x: 0, y: 0)
+    private var ratio: CGFloat {
+        sqrt(bounds.width) * CGFloat.pi
+    }
 
     // MARK: Initializer
     override init(frame: CGRect) {
@@ -92,9 +95,8 @@ class DiceView: UIView {
 extension DiceView {
     
     func transform(point: CGPoint, isEnded: Bool) {
-        let angleX = angle.x + (point.x/30)
-        let angleY = angle.y - (point.y/30)
-        
+        let angleX = angle.x + (point.x / ratio)
+        let angleY = angle.y - (point.y / ratio)
         var transform = CATransform3DIdentity
         transform.m34 = -1 / 500
         transform = CATransform3DRotate(transform, angleX, 0, 1, 0)
@@ -105,5 +107,37 @@ extension DiceView {
             angle.x = angleX
             angle.y = angleY
         }
+    }
+    
+    func transform(to point: Int) {
+        
+        var x: CGFloat = 0
+        var y: CGFloat = 0
+        let offset = bounds.width / 2
+        
+        switch point {
+        case 2: x = -offset
+        case 4: y = -offset
+        case 3: y = offset
+        case 5: x = offset
+        case 6: x = offset * 2
+        default: break
+        }
+        
+        let angleX = (x / ratio)
+        let angleY = (y / ratio)
+        
+        let animation = CABasicAnimation(keyPath: "sublayerTransform")
+        animation.fromValue = self.layer.sublayerTransform
+        animation.duration = 1
+        var transform = CATransform3DIdentity
+        transform.m34 = -1 / 500
+        transform = CATransform3DRotate(transform, angleX, 0, 1, 0)
+        transform = CATransform3DRotate(transform, angleY, 1, 0, 0)
+        self.layer.add(animation, forKey: "sublayerTransform")
+        self.layer.sublayerTransform = transform
+
+        angle.x = angleX
+        angle.y = angleY
     }
 }
